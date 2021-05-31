@@ -9,6 +9,10 @@ import {AddShoppingCart} from '@material-ui/icons'
 // Styles
 import {Wrapper} from './App.styles'
 
+const getProducts = async () => {
+  await (await fetch('https://fakestoreapi.com/products')).json()
+}
+
 function App() {
   return (
     <h1>Hello world</h1>
