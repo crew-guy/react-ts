@@ -2,9 +2,12 @@ import React from 'react';
 import { useState } from 'react'
 import {useQuery} from 'react-query'
  
-// components
+// Components
 import { Drawer, LinearProgress, Grid, Badge } from '@material-ui/core'
-// import {AddShoppingCartIcon} from '@material-ui/icons'
+import {AddShoppingCart} from '@material-ui/icons'
+
+// Styles
+import {Wrapper} from './App.styles'
 
 function App() {
   return (
