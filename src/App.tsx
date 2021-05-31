@@ -9,8 +9,19 @@ import {AddShoppingCart} from '@material-ui/icons'
 // Styles
 import {Wrapper} from './App.styles'
 
-const getProducts = async () => {
-  await (await fetch('https://fakestoreapi.com/products')).json()
+// Types
+export type CartItemType = {
+  id: number,
+  category: string,
+  description: string,
+  image: string,
+  price: number,
+  title: string,
+  amount: number
+}
+
+const getProducts = async () : Promise<CartItemType> => {
+  return await (await fetch('https://fakestoreapi.com/products')).json()
 }
 
 function App() {
